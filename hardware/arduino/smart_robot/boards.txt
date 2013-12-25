@@ -1,0 +1,28 @@
+
+smart_robot.name=SMART ROBOT ADK 2.0
+smart_robot.vid.0=0x2341
+smart_robot.pid.0=0x003e
+
+smart_robot.upload.tool               	= stm32ld
+smart_robot.upload.protocol           	= something
+smart_robot.upload.maximum_size       	= 49152
+smart_robot.upload.ram.maximum_size   	= 17000
+smart_robot.upload.flash.maximum_size 	= 49152
+
+# 부트로더 다운로드 설정 
+smart_robot.bootloader.tool				= stm32ld
+smart_robot.bootloader.file				= baram/smartbd_boot_baram.bin
+
+
+smart_robot.build.board=SMROBOT_STM32
+smart_robot.build.mcu=cortex-m3
+smart_robot.build.family=cortex-m3
+smart_robot.build.f_cpu=72000000L
+smart_robot.build.usb_product="smart robot"
+smart_robot.build.core=arduino
+smart_robot.build.extra_flags=-mthumb -DSTM32_MEDIUM_DENSITY -DMCU_STM32F103CB -DVECT_TAB_FLASH
+smart_robot.build.ldscript=linker_scripts/gcc/flash.ld
+smart_robot.build.variant=smart_robot
+smart_robot.build.variant_system_lib=libcs3_stm32_med_density.a
+smart_robot.build.vid=0x2341
+smart_robot.build.pid=0x003e
